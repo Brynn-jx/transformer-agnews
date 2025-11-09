@@ -1,0 +1,21 @@
+model:
+  d_model: 128
+  num_heads: 4
+  num_layers: 2
+  dff: 256
+  num_class: 4
+  max_len: 50
+  dropout: 0.3
+
+train:
+  train_batch_size: 128
+  dataset: ag_news
+  lr: 0.0005
+  num_epochs: 10
+  optimizer: AdamW
+  weight_decay: 0.01
+  val_metric: best_acc
+  save_final_model: True
+
+test:
+  eval_batch_size: 128
